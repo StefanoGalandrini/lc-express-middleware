@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Margherita",
+    "image": "margherita.webp",
+    "ingredients": [
+      "pomodoro",
+      "mozzarella"
+    ]
+  },
+  {
+    "name": "Marinara",
+    "image": "marinara.jpeg",
+    "ingredients": [
+      "pomodoro",
+      "aglio",
+      "origano"
+    ]
+  },
+  {
+    "name": "Diavola",
+    "image": "diavola.jpeg",
+    "ingredients": [
+      "pomodoro",
+      "mozzarella",
+      "salame piccante"
+    ]
+  },
+  {
+    "name": "Bufalina",
+    "image": "bufalina.jpeg",
+    "ingredients": [
+      "pomodoro",
+      "mozzarella di bufala"
+    ]
+  },
+  {
+    "name": "4 formaggi",
+    "image": "4_formaggi.jpeg",
+    "ingredients": [
+      "pomodoro",
+      "mozzarella",
+      "gorgonzola",
+      "parmigiano",
+      "ricotta"
+    ]
+  }
+]
