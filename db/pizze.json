@@ -1,39 +1,57 @@
 [
   {
+    "id": 100,
+    "slug": "margherita",
     "name": "Margherita",
     "image": "margherita.webp",
     "ingredients": [
       "pomodoro",
       "mozzarella"
-    ]
+    ],
+    "updatedAt": "2023-11-13T09:53:38.955Z"
   },
   {
+    "id": 101,
+    "slug": "marinara",
     "name": "Marinara",
     "image": "marinara.jpeg",
     "ingredients": [
       "pomodoro",
       "aglio",
       "origano"
-    ]
+    ],
+    "updatedAt": "2023-11-13T09:53:38.956Z"
   },
   {
+    "id": 102,
+    "slug": "diavola",
     "name": "Diavola",
     "image": "diavola.jpeg",
     "ingredients": [
       "pomodoro",
       "mozzarella",
       "salame piccante"
-    ]
+    ],
+    "updatedAt": "2023-11-13T09:53:38.956Z"
   },
   {
+    "id": 103,
+    "slug": "bufalina",
     "name": "Bufalina",
     "image": "bufalina.jpeg",
     "ingredients": [
       "pomodoro",
       "mozzarella di bufala"
-    ]
+    ],
+    "attachment": [
+      "storage/secret_image.jpg",
+      "storage/secret_pdf.pdf"
+    ],
+    "updatedAt": "2023-11-13T09:53:38.956Z"
   },
   {
+    "id": 104,
+    "slug": "4-formaggi",
     "name": "4 formaggi",
     "image": "4_formaggi.jpeg",
     "ingredients": [
@@ -42,6 +60,10 @@
       "gorgonzola",
       "parmigiano",
       "ricotta"
-    ]
+    ],
+    "attachment": [
+      "storage/secret_imageaaa.jpg"
+    ],
+    "updatedAt": "2023-11-13T09:53:38.956Z"
   }
 ]
