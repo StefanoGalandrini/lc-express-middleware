@@ -9,6 +9,12 @@ dotenv.config();
 // istanza di express
 const app = express();
 
+// configuro express per leggere i dati in formato json
+app.use(express.json());
+
+// configuro express per leggere i dati in formato x-www-form-urlencoded
+app.use(express.urlencoded({ extended: true }));
+
 // configuro i file statici
 app.use(express.static("public"));
 

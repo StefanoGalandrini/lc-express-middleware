@@ -1,28 +1,5 @@
 [
   {
-    "id": 100,
-    "slug": "margherita",
-    "name": "Margherita",
-    "image": "margherita.webp",
-    "ingredients": [
-      "pomodoro",
-      "mozzarella"
-    ],
-    "updatedAt": "2023-11-13T09:53:38.955Z"
-  },
-  {
-    "id": 101,
-    "slug": "marinara",
-    "name": "Marinara",
-    "image": "marinara.jpeg",
-    "ingredients": [
-      "pomodoro",
-      "aglio",
-      "origano"
-    ],
-    "updatedAt": "2023-11-13T09:53:38.956Z"
-  },
-  {
     "id": 102,
     "slug": "diavola",
     "name": "Diavola",
@@ -65,5 +42,29 @@
       "storage/secret_imageaaa.jpg"
     ],
     "updatedAt": "2023-11-13T09:53:38.956Z"
+  },
+  {
+    "id": 105,
+    "slug": "verde-e-speck",
+    "name": "Verde e Speck",
+    "ingredients": [
+      "pomodoro",
+      "mozzarella",
+      "gorgonzola",
+      "speck"
+    ],
+    "updatedAt": "2023-11-14T09:52:16.369Z"
+  },
+  {
+    "id": 108,
+    "slug": "rucola-e-grana",
+    "name": "Rucola e grana",
+    "ingredients": [
+      "pomodoro",
+      "mozzarella",
+      "rucola",
+      "grana padano DOP"
+    ],
+    "updatedAt": "2023-11-14T09:54:13.380Z"
   }
 ]
