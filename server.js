@@ -1,9 +1,14 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const { log } = require("console");
+
 const homeController = require("./controllers/home");
+
 const pizzeRouter = require("./routers/pizze");
 const uploadsRouter = require("./routers/uploads");
+const adminRouter = require("./routers/admin");
+const authRouter = require("./routers/auth");
+
 const errorsFormatterMiddleware = require("./middlewares/errorsFormatter");
 const routesLoggerMiddleware = require("./middlewares/routesLogger");
 const routeNotFoundMiddleware = require("./middlewares/routeNotFound");
@@ -34,6 +39,12 @@ app.get("/contacts", homeController.contacts);
 app.use("/pizze", pizzeRouter)
 
 app.use("/uploads", uploadsRouter)
+
+// Rotte relative all'entità admin che saranno protette
+app.use("/admin", adminRouter)
+
+// rotte relative all'entità auth
+app.use("/", authRouter)
 
 // Gestione degli errori
 app.use(errorsFormatterMiddleware)
