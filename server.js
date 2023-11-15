@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const { log } = require("console");
 const homeController = require("./controllers/home");
 const pizzeRouter = require("./routers/pizze");
+const uploadsRouter = require("./routers/uploads");
 
 dotenv.config();
 
@@ -25,6 +26,8 @@ app.get("/contacts", homeController.contacts);
 
 // Rotte relative all'entità pizze
 app.use("/pizze", pizzeRouter)
+
+app.use("/uploads", uploadsRouter)
 
 // Avviamo il server
 app.listen(process.env.PORT || 3000, () => {

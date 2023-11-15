@@ -3,6 +3,7 @@ const menu = require("../db/pizze.json");
 const path = require("path");
 const fs = require("fs");
 const { kebabCase } = require("lodash");
+const uploadController = require("./upload");
 
 function index(req, res) {
   res.format({
@@ -65,7 +66,7 @@ function show(req, res) {
   res.json(pizza);
 }
 
-function store(req, res) {
+function store_originale(req, res) {
   console.log(req.body);
   console.log(req.file);
 
@@ -109,6 +110,32 @@ function store(req, res) {
     slug: kebabCase(req.body.name),
     updatedAt: new Date().toISOString(),
     image: req.file,
+  });
+
+  // converto il DB in JSON
+  const json = JSON.stringify(pizze, null, 2);
+
+  // scrivo il JSON su file
+  fs.writeFileSync(path.resolve(__dirname, "..", "db", "pizze.json"), json);
+
+  res.json(pizze[pizze.length - 1]);
+}
+
+function store(req, res) {
+  const pizze = require("../db/pizze.json");
+  let fileName;
+
+  // Gestisco upload dei file
+  if (req.file) {
+    fileName = uploadController.storeUploadFile(req.file);
+  }
+
+  pizze.push({
+    ...req.body,
+    // id: idList[0] + 1,
+    slug: kebabCase(req.body.name),
+    updatedAt: new Date().toISOString(),
+    image: fileName,
   });
 
   // converto il DB in JSON
