@@ -8,5 +8,15 @@
     "filename": "402b2f1e19c8778584dd5c595d7b4acb",
     "path": "storage/uploads/402b2f1e19c8778584dd5c595d7b4acb",
     "size": 73890
+  },
+  {
+    "fieldname": "attachment",
+    "originalname": "Camera_Caf _bicchiere.webp",
+    "encoding": "7bit",
+    "mimetype": "image/webp",
+    "destination": "storage/uploads",
+    "filename": "14b00fe5448202acbce28cc8ca896602",
+    "path": "storage/uploads/14b00fe5448202acbce28cc8ca896602",
+    "size": 73890
   }
 ]

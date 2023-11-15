@@ -4,6 +4,9 @@ const { log } = require("console");
 const homeController = require("./controllers/home");
 const pizzeRouter = require("./routers/pizze");
 const uploadsRouter = require("./routers/uploads");
+const errorsFormatterMiddleware = require("./middlewares/errorsFormatter");
+const routesLoggerMiddleware = require("./middlewares/routesLogger");
+const routeNotFoundMiddleware = require("./middlewares/routeNotFound");
 
 dotenv.config();
 
@@ -19,15 +22,29 @@ app.use(express.urlencoded({ extended: true }));
 // configuro i file statici
 app.use(express.static("public"));
 
+// Middleware che stampa un log sulle rotte richieste dagli utenti
+// app.use(routesLoggerMiddleware);
+
 // Definiamo le rotte
 app.get("/", homeController.index);
-app.get("/about", homeController.about);
+app.get("/about", routesLoggerMiddleware, homeController.about);
 app.get("/contacts", homeController.contacts);
 
 // Rotte relative all'entità pizze
 app.use("/pizze", pizzeRouter)
 
 app.use("/uploads", uploadsRouter)
+
+// Gestione degli errori
+app.use(errorsFormatterMiddleware)
+
+// Gestione delle rotte non trovate
+// Siccome questo middleware NON invoca la funzione next() 
+// per far proseguire la Request, allora la dobbiamo registrare 
+// per ultima, dopo TUTTE le altre rotte
+// in modo che venga eseguito solo se nessuna delle rotte precedenti
+// ha risposto alla Request
+app.use(routeNotFoundMiddleware)
 
 // Avviamo il server
 app.listen(process.env.PORT || 3000, () => {

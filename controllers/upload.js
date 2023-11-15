@@ -7,6 +7,8 @@ const path = require("path")
  * @param {express.Response} res 
  */
 function upload (req, res) {
+
+  asdasdasd
   storeUploadFile(req.file)
 
   res.json(req.file)

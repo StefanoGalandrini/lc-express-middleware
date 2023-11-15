@@ -1,3 +1,4 @@
+const { log } = require("console");
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
@@ -7,6 +8,8 @@ const path = require("path");
  * @param {express.Response} res 
  */
 function index (req, res) {
+
+  log("richiesta arrivata al controller home");
   /* const acceptType = req.accepts();
 
   log(acceptType);
@@ -21,6 +24,8 @@ function index (req, res) {
       message: "Hello World!",
     });
   } */
+
+  adsadas
 
   res.format({
     text: () => {
